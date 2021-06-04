@@ -26,7 +26,6 @@ body.dark .stats__title {
   background-color: #4ECDC4;
   color: #FFE66D;
 }
-
 body.dark .nav__link{
   background-color: #4ECDC4;
 	color: #FFE66D;
@@ -34,6 +33,15 @@ body.dark .nav__link{
 body.dark .editable-list{
   background-color: #FFE66D;
   color: #4ECDC4;
+}
+body.dark .books-fantasy__heading{
+	color: #FFE66D;
+}
+body.dark .books-child__heading{
+	color: #FFE66D;
+}
+body.dark .books-learning__heading{
+	color: #FFE66D;
 }
 
 .header{
@@ -50,6 +58,7 @@ body.dark .editable-list{
 .header__info{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__nav{
@@ -65,7 +74,7 @@ body.dark .editable-list{
 .nav__link{
 	text-decoration: none;
 	list-style: none;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat';
 	font-weight: normal;
 	font-size: 1.2rem;
 	color: #1A535C;
@@ -87,7 +96,7 @@ body.dark .editable-list{
 }
 
 .info__themeButton{
-  padding: 0;
+  height: 60px;
   font-family: 'Montserrat', sans-serif;
   color: inherit;
   background-color: transparent;
@@ -185,7 +194,7 @@ color: #1A535C;
     width: 100%;
     max-width: 100%;
     padding: 5px 0 5px 5px;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat';
     border: 2px solid #2f485811;
     border-radius: 4px;
   }
@@ -204,3 +213,36 @@ color: #1A535C;
     background-color: #2f485811;
   }
   
+.books-fantasy, .books-learning, .books-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-fantasy__heading, .books-learning__heading, .books-child__heading{
+  font-family: 'Montserrat';
+	font-weight: normal;
+	font-size: 2rem;
+	color: #1A535C;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.books-fantasy__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.book__about{
+  width: 320px;
+  font-family: 'Montserrat';
+  font-size: 12px;
+}
+
+.book__name{
+  width: 320px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
