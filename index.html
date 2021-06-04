@@ -17,17 +17,28 @@
             <h1 class="info__heading">Книги</h1>
             <button class="info__themeButton" id="themeButton">Сменить тему</button>
         </div>
-            <nav class="nav">
-                <div class="nav__content">
-                    <a href="#" class="nav__item nav__item_active">Home</a>
-                    <a href="#" class="nav__item">Blog</a>
-                    <a href="#" class="nav__item">About</a>
-                    <a href="#" class="nav__item">Contacts</a>
-                </div>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#fantasy" class="nav__link"tabindex="0">Книги фантастика</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#learning" class="nav__link"tabindex="0">Книги Обучение</a>
+                    </li>					
+                    <li class="nav__item">
+                        <a href="#child" class="nav__link"tabindex="0">Книги детские</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#app" class="nav__link"tabindex="0">Личный список</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#info" class="nav__link"tabindex="0">Контакты</a>
+                    </li>
+                </ul>
             </nav>
 	</header>
     <main class="main">
-        <div id="app" class="main__editable-list editable-list">
+        <section id="app" class="main__editable-list editable-list">
             <div class="editable-list__stats stats">
                 <h3 class="stats__title">{{"Книги, которые я хочу прочитать: "+ tasks.length}}</h3>
             </div>
@@ -39,9 +50,11 @@
                 </div>
                 <button class="add_task__btn" @click="add_task">➕</button>
             </div>
-          </div>
+        </section>
+
+
     </main>
-    <footer class="footer">
+    <footer class="footer" id="info">
 		<p class="footer__heading">Шунаева Екатерина</p>
         <p class="footer__heading">201-321</p>
         <p class="footer__heading">Москва, 4 июня 2021</p>

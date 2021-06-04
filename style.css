@@ -3,6 +3,9 @@
     margin: 0;
     transition: all 0.5s;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body.dark{
   background-color: #1A535C;
@@ -18,6 +21,19 @@ body.dark .header {
 body.dark .footer {
 	background-color: #4ECDC4;
 	color: #FFE66D;
+}
+body.dark .stats__title {
+  background-color: #4ECDC4;
+  color: #FFE66D;
+}
+
+body.dark .nav__link{
+  background-color: #4ECDC4;
+	color: #FFE66D;
+}
+body.dark .editable-list{
+  background-color: #FFE66D;
+  color: #4ECDC4;
 }
 
 .header{
@@ -36,7 +52,26 @@ body.dark .footer {
   justify-content: space-between;
 }
 
-.nav{
+.header__nav{
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__item{
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.nav__link{
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 1.2rem;
+	color: #1A535C;
+}
+
+.nav__list{
   display: flex;
   justify-content: space-between;
 }
@@ -52,13 +87,11 @@ body.dark .footer {
 }
 
 .info__themeButton{
-  
-}
-
-.h1_2{
-	margin-left: 50%;
-	color: #FFE66D;
-	height: 70%;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 main {
@@ -79,34 +112,38 @@ main {
 	font-family: 'Montserrat';
 }
 
-.theme-button
-{
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    display: inline-block;
-    padding: 10px 25px;
-    cursor: pointer;
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
 }
 
-  #app{
-    width: 320px;
-    box-shadow: 0 3px 20px #00000023;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px;
-    margin: 20px 0 0 20px;
-    color: var(--main);
-  }
-  .stats {
-    margin: 0px;
-  }
-  .stats__title {
-    margin: -10px -10px 10px -10px;
-    padding: 10px;
-    background-color: var(--main);
-    color: var(--white);
-    font-weight: 500;
-  }
+#app{
+  width: 360px;
+  box-shadow: 0 3px 20px #00000023;
+  font-family: 'Montserrat';
+  padding: 10px;
+  margin: 20px 0 0 20px;
+  color: var(--main);
+}
+
+.editable-list{
+background-color: #F7FFF7;
+color: #1A535C;
+}
+
+.stats {
+  margin: 0px;
+}
+.stats__title {
+  margin: -10px -10px 10px -10px;
+  padding: 10px;
+  background-color: #FFE66D;
+  color: #1A535C;
+  font-weight: 500;
+}
   .task {
     display: flex;
     flex-direction: row;
@@ -117,7 +154,7 @@ main {
     max-width: 100%;
   }
   .task:hover {
-    background-color: #2f485811;
+    background-color: #2f485870;
   }
   .task__title {
     font-size: 18px;
