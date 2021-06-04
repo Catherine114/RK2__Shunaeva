@@ -5,7 +5,9 @@
 }
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
+
 
 body.dark{
   background-color: #1A535C;
@@ -104,7 +106,6 @@ body.dark .books-learning__heading{
 }
 
 main {
-	min-height: calc(100vh - 70px);
 	background-color: #F7FFF7;
 	color: #1A535C;
 }
@@ -130,11 +131,11 @@ main {
 }
 
 #app{
-  width: 360px;
+  width: 30%;
   box-shadow: 0 3px 20px #00000023;
   font-family: 'Montserrat';
-  padding: 10px;
-  margin: 20px 0 0 20px;
+  padding: 5%;
+  margin: 5% 0 0 5%;
   color: var(--main);
 }
 
@@ -144,14 +145,15 @@ color: #1A535C;
 }
 
 .stats {
-  margin: 0px;
+  margin: 0;
 }
 .stats__title {
-  margin: -10px -10px 10px -10px;
-  padding: 10px;
+  margin: -3% -3% 3% -3%;
+  padding: 7%;
   background-color: #FFE66D;
   color: #1A535C;
   font-weight: 500;
+  font-size: 2rem;
 }
   .task {
     display: flex;
@@ -238,11 +240,43 @@ color: #1A535C;
 .book__about{
   width: 320px;
   font-family: 'Montserrat';
-  font-size: 12px;
+  font-size: 1.3rem;
 }
 
 .book__name{
   width: 320px;
   font-family: 'Montserrat';
-  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.main__heading{
+  font-family: 'Montserrat';
+  font-size: 3rem;
+  margin-top: 10%;
+}
+
+@keyframes trembling {
+  15% {
+    transform: translateX(15px);
+  }
+  30% {
+    transform: translateX(-15px);
+  }
+  40% {
+    transform: translateX(11px);
+  }
+  50% {
+    transform: translateX(-11px);
+  }
+  65% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.book:hover {
+  animation: trembling 2s ease;
+  animation-iteration-count: 1;
 }

@@ -13,80 +13,81 @@
 <body>
     <header class="header">
         <div class="header__info info">
-            <img class="info__img" src="img/logo.png" srcset="img/huge_logo.jpg 2x" alt="Logotype">
-            <h1 class="info__heading">Книги</h1>
-            <button class="info__themeButton" id="themeButton">Сменить тему</button>
+            <img class="info__img" src="img/logo.png" srcset="img/huge_logo.jpg 2x" alt="Logotype" tabindex="0">
+            <h1 class="info__heading" tabindex="0">Книги</h1>
+            <button class="info__themeButton" id="themeButton" tabindex="0">Сменить тему</button>
         </div>
         <hr>
             <nav class="header__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#fantasy" class="nav__link"tabindex="0">Книги фантастика</a>
+                        <a href="#fantasy" class="nav__link" tabindex="0">Книги фантастика</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#learning" class="nav__link"tabindex="0">Книги Обучение</a>
+                        <a href="#learning" class="nav__link" tabindex="0">Книги Обучение</a>
                     </li>					
                     <li class="nav__item">
-                        <a href="#child" class="nav__link"tabindex="0">Книги детские</a>
+                        <a href="#child" class="nav__link" tabindex="0">Книги детские</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#app" class="nav__link"tabindex="0">Личный список</a>
+                        <a href="#app" class="nav__link" tabindex="0">Личный список</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#info" class="nav__link"tabindex="0">Контакты</a>
+                        <a href="#info" class="nav__link" tabindex="0">Контакты</a>
                     </li>
                 </ul>
             </nav>
 	</header>
     <main class="main">
-        <section id="app" class="main__editable-list editable-list">
+        <section id="app" class="main__editable-list editable-list" tabindex="0">
             <div class="editable-list__stats stats">
-                <h3 class="stats__title">{{"Книги, которые я хочу прочитать: "+ tasks.length}}</h3>
+                <h3 class="stats__title" tabindex="0">{{"Книги, которые я хочу прочитать: "+ tasks.length}}</h3>
             </div>
             <task class="editable-list__task" @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data" ></task>
             <div class="editable-list__add_task add_task">
                 <div class="add_task__input ">
-                    <input placeholder="Новая задача..." type="text" v-model="new_task.title">
-                    <textarea placeholder="Описание" type="text" v-model="new_task.desc"></textarea>
+                    <input placeholder="Название книги..." type="text" v-model="new_task.title"  tabindex="0">
+                    <textarea placeholder="Описание" type="text" v-model="new_task.desc"  tabindex="0"></textarea>
                 </div>
-                <button class="add_task__btn" @click="add_task">➕</button>
+                <button class="add_task__btn" @click="add_task" tabindex="0">➕</button>
             </div>
         </section>
-
+        
+        <h2 class="main__heading" tabindex="0">Подборка книг по категориям</h2>
         <section class="main__books-fantasy books-fantasy" id="fantasy">
-            <h3 class="books-fantasy__heading">Фантастика</h3>
+            <h3 class="books-fantasy__heading" tabindex="0">Фантастика</h3>
             <div class="books-fantasy__list list">
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">451 градус по Фаренгейту</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«451 градус по Фаренгейту» — научно-фантастический роман-антиутопия Рэя Брэдбери, изданный в 1953 году. Роман описывает американское общество близкого будущего, в котором книги находятся под запретом; «пожарные», к числу которых принадлежит и главный герой Гай Монтэг, сжигают любые найденные книги.</p>
+                    <h4 class="book__name" tabindex="0">451 градус по Фаренгейту</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">«451 градус по Фаренгейту» — научно-фантастический роман-антиутопия Рэя Брэдбери, изданный в 1953 году. Роман описывает американское общество близкого будущего, в котором книги находятся под запретом; «пожарные», к числу которых принадлежит и главный герой Гай Монтэг, сжигают любые найденные книги.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">1984</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«1984» — роман-антиутопия Джорджа Оруэлла, изданный в 1949 году. Роман «1984» наряду с такими произведениями, как «Мы» Евгения Замятина, «О дивный новый мир» Олдоса Хаксли и «451 градус по Фаренгейту» Рэя Брэдбери считается одним из образцов антиутопии.</p>
+                    <h4 class="book__name" tabindex="0">1984</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">«1984» — роман-антиутопия Джорджа Оруэлла, изданный в 1949 году. Роман «1984» наряду с такими произведениями, как «Мы» Евгения Замятина, «О дивный новый мир» Олдоса Хаксли и «451 градус по Фаренгейту» Рэя Брэдбери считается одним из образцов антиутопии.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Метро 2033</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«Метро́ 2033» — постапокалиптический роман Дмитрия Глуховского, описывающий жизнь людей в московском метро после ядерной войны на Земле. Выпущен издательством «Эксмо» в 2005 году и переиздан издательством «Популярная литература» в 2007 году.</p>
+                    <h4 class="book__name" tabindex="0">Метро 2033</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">«Метро́ 2033» — постапокалиптический роман Дмитрия Глуховского, описывающий жизнь людей в московском метро после ядерной войны на Земле. Выпущен издательством «Эксмо» в 2005 году и переиздан издательством «Популярная литература» в 2007 году.</p>
                 </div>
             </div>
             <div class="books-fantasy__list list">
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Дюна</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«Дю́на» — научно-фантастический роман американского писателя Фрэнка Герберта, впервые опубликованный в 1963-1965 годах в виде серии глав в журнале Analog Science Fiction and Fact и в 1965 году впервые изданный отдельной книгой. Книга, сделавшая Герберта знаменитым, была удостоена премий Хьюго и Небьюла.</p>
+                    <h4 class="book__name" tabindex="0">Дюна</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">«Дю́на» — научно-фантастический роман американского писателя Фрэнка Герберта, впервые опубликованный в 1963-1965 годах в виде серии глав в журнале Analog Science Fiction and Fact и в 1965 году впервые изданный отдельной книгой. Книга, сделавшая Герберта знаменитым, была удостоена премий Хьюго и Небьюла.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Вино из одуванчиков</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«Винo из одуванчиков» — повесть Рэя Брэдбери, впервые изданная в 1957 году. «Вино из одуванчиков» — произведение, выделяющееся среди литературного творчества Рэя Брэдбери личными переживаниями писателя. Это во многом автобиографическая книга.</p>
+                    <h4 class="book__name" tabindex="0">Вино из одуванчиков</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">«Винo из одуванчиков» — повесть Рэя Брэдбери, впервые изданная в 1957 году. «Вино из одуванчиков» — произведение, выделяющееся среди литературного творчества Рэя Брэдбери личными переживаниями писателя. Это во многом автобиографическая книга.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Аэлита</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">«Аэли́та» — фантастический роман Алексея Николаевича Толстого о путешествии землян на Марс. Текст написан в основном в эмиграции, первое издание вышло в Петрограде в 1923 году и неоднократно перепечатывалось. </p>
+                    <h4 class="book__name" tabindex="0">Аэлита</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg"> tabindex="0" 
+                    <p class="book__about" tabindex="0">«Аэли́та» — фантастический роман Алексея Николаевича Толстого о путешествии землян на Марс. Текст написан в основном в эмиграции, первое издание вышло в Петрограде в 1923 году и неоднократно перепечатывалось. </p>
                 </div>
             </div>
         </section>
@@ -95,48 +96,48 @@
             <h3 class="books-learning__heading">Обучение</h3>
             <div class="books-fantasy__list list">
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">JavaScript. Подробное руководство</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Данное издание содержит полное описание базового языка, а также традиционной и стандартизованной объективных моделей документа, реализованных в веб-броузерах.</p>
+                    <h4 class="book__name" tabindex="0">JavaScript. Подробное руководство</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Данное издание содержит полное описание базового языка, а также традиционной и стандартизованной объективных моделей документа, реализованных в веб-броузерах.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Создаем динамические веб-сайты с помощью PHP, MySQL, JavaScript, CSS и HTML5. Робин Никсон</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Большая книга-справочник, которая поможет понять работу сайта на программном и серверном уровне. В последнем издании читатель может изучить такие программные среды как: HTML5, CSS, JavaScript, PHP. Поймет принципы работы базы данных MySQL, научится работать с cookie-файлами, а также применять вызовы AJAX для повышения скорости загрузки страниц сайта. Книга будет полезна опытным пользователям, которые уже разбираются в базовых принципах верстки.</p>
+                    <h4 class="book__name" tabindex="0">Создаем динамические веб-сайты с помощью PHP, MySQL, JavaScript, CSS и HTML5. Робин Никсон</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Большая книга-справочник, которая поможет понять работу сайта на программном и серверном уровне. В последнем издании читатель может изучить такие программные среды как: HTML5, CSS, JavaScript, PHP. Поймет принципы работы базы данных MySQL, научится работать с cookie-файлами, а также применять вызовы AJAX для повышения скорости загрузки страниц сайта. Книга будет полезна опытным пользователям, которые уже разбираются в базовых принципах верстки.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Большая книга CSS. Дэвид Макфарланд</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Последнее издание книги поможет разобраться в основах HTML, но главная ее цель – это создание быстрых и динамичных страниц с помощью разметки CSS3. Книгу можно рассматривать как справочное руководство. Она будет полезна как верстальщикам, так и веб-дизайнерам. На страницах есть примеры кода, а также скриншоты с реальных сайтов.</p>
+                    <h4 class="book__name" tabindex="0">Большая книга CSS. Дэвид Макфарланд</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Последнее издание книги поможет разобраться в основах HTML, но главная ее цель – это создание быстрых и динамичных страниц с помощью разметки CSS3. Книгу можно рассматривать как справочное руководство. Она будет полезна как верстальщикам, так и веб-дизайнерам. На страницах есть примеры кода, а также скриншоты с реальных сайтов.</p>
                 </div>
             </div>
         </section>
 
         <section class="main__books-child books-child" id="child">
-            <h3 class="books-child__heading">Детские</h3>
+            <h3 class="books-child__heading" tabindex="0">Детские</h3>
             <div class="books-fantasy__list list">
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Малыш и Карлсон, который живёт на крыше. Астрид Линдгрен</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Совсем небольшая часть родителей обвиняет лучшего в мире мужчину в полном расцвете сил, обаятельного толстячка Карлсона в непедагогичности. Прочие отбрасывают эти глупые условности и читают-читают-читают детям бессмертные книги Астрид Линдгрен про Карлсона и Пеппи Длинныйчулок. </p>
+                    <h4 class="book__name" tabindex="0">Малыш и Карлсон, который живёт на крыше. Астрид Линдгрен</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Совсем небольшая часть родителей обвиняет лучшего в мире мужчину в полном расцвете сил, обаятельного толстячка Карлсона в непедагогичности. Прочие отбрасывают эти глупые условности и читают-читают-читают детям бессмертные книги Астрид Линдгрен про Карлсона и Пеппи Длинныйчулок. </p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Гадкий утёнок. Ганс Христиан Андерсен</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Сказки Ганса Христиана Андерсена не назовёшь упоительно весёлыми. Они зажимают другие струны детской души: предвкушение, страх и желание, чтобы добро наконец победило зло. К слову, последнее случается у Андерсена не всегда: как, например, в сказке про маленькую торговку спичками.</p>
+                    <h4 class="book__name" tabindex="0">Гадкий утёнок. Ганс Христиан Андерсен</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Сказки Ганса Христиана Андерсена не назовёшь упоительно весёлыми. Они зажимают другие струны детской души: предвкушение, страх и желание, чтобы добро наконец победило зло. К слову, последнее случается у Андерсена не всегда: как, например, в сказке про маленькую торговку спичками.</p>
                 </div>
                 <div class="books-fantasy__book book">
-                    <h4 class="book__name">Дядя Фёдор, пёс и кот. Эдуард Успенский</h4>
-                    <img class="book__img" alt="book" src="img/book.jpg"> 
-                    <p class="book__about">Знакомая всем с детства история о том, как мальчик по имени Дядя Фёдор однажды в летние каникулы решил переехать в деревню и что из этого вышло.</p>
+                    <h4 class="book__name" tabindex="0">Дядя Фёдор, пёс и кот. Эдуард Успенский</h4>
+                    <img class="book__img" alt="book" src="img/book.jpg" tabindex="0"> 
+                    <p class="book__about" tabindex="0">Знакомая всем с детства история о том, как мальчик по имени Дядя Фёдор однажды в летние каникулы решил переехать в деревню и что из этого вышло.</p>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer" id="info">
-		<p class="footer__heading">Шунаева Екатерина</p>
-        <p class="footer__heading">201-321</p>
-        <p class="footer__heading">Москва, 4 июня 2021</p>
+		<p class="footer__heading" tabindex="0">Шунаева Екатерина</p>
+        <p class="footer__heading" tabindex="0">201-321</p>
+        <p class="footer__heading" tabindex="0">Москва, 4 июня 2021</p>
 	</footer>
     <script src="script.js"></script>
 </body>
